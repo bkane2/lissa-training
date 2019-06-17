@@ -1,4 +1,4 @@
-;; LEVEL 2
+;; LEVEL 3
 ;; Using wildcards
 
 (eval-when (load eval)
