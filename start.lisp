@@ -43,8 +43,11 @@
 ;
 ; Start dialogue
 ;
+(setf *temp-dir* ".")
+(setf *default-pathname-defaults* (truename *temp-dir*))
 (load (format nil "rules-input-level-~a.lisp" *level*))
 (load "rules-for-example-reaction.lisp")
 (load "rules-for-question-reaction.lisp")
+(setf *default-pathname-defaults* *root-dir*)
 
 (lissa *mode*)
