@@ -13,6 +13,11 @@
     (feat-relationships wife husband spouse dad father mom mother son grandson daughter granddaughter child friend friend\'s mate mate\'s)
     (feat-someone someone someone\'s somebody\'s somebody another feat-relationships)
     (feat-car-poss-by-me my a)
+
+    ;; ============================
+    ;; TODO: ADD MORE FEATURES HERE
+    ;; ============================
+
   ))
 
   (READRULES '*specific-answer-from-example-input*
@@ -44,6 +49,11 @@
       2 ((I walked here today \.) (example)) (0 :gist)
     1 (0 bus 0)
       2 ((I took the bus here today \.) (example)) (0 :gist)
+    
+    ;; =========================
+    ;; TODO: ADD NEW RULES HERE
+    ;; =========================
+
     1 (0)
       2 ((NIL Gist \: nothing found \.) (example)) (0 :gist)
 
