@@ -17,7 +17,7 @@ will run each test case and return the fraction that were correct.
 Initially, the rule files aren't complete: the gist test cases get `10/15` correct, and the ULF test cases get `5/15` correct.
 It's up to you to help improve them!
 
-To view the test cases as well as adding your own, see `test.lisp`.
+To view the test cases as well as to add your own, see `test.lisp`.
 
 ## Simulating Lissa
 
