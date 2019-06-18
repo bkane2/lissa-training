@@ -87,7 +87,7 @@
        ; | back up to the reassembly pattern which lead to this subtree.
        ; V
       2 ((lex-ulf! det 1) block.n) (0 :ulf)
-    1 (det adj 3) 
+    1 (det adj 3)
        ; In this case, we have a |
        ; noun with premodifiers, |
        ; so we need to further   |
@@ -96,7 +96,7 @@
       2 (((lex-ulf! det 1) (*n1-ulf-tree* 2 3)) (1 2)) (0 :ulf-recur)
 
     1 (det corp block) 
-      2 ((lex-ulf! det 1) (lex-ulf! name 2) block.n) (0 :ulf)
+      2 ((lex-ulf! det 1) ((lex-ulf! name 2) block.n)) (0 :ulf)
   ))
 
 
