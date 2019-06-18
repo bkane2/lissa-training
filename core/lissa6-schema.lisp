@@ -12,7 +12,7 @@
 :Actions 
 
 ?a1. (Me say-to.v you 
-      '(Hello please give me some example input \.))
+      '(Hello. How did you get here today ?))
 
 ?a2. (You reply-to.v ?a1.)
 
