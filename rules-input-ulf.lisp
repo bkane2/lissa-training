@@ -31,12 +31,18 @@
   ; This is (currently) the "root" for ULF transduction. In the core Lissa
   ; code, after a gist clause is extracted from user input, the gist clause
   ; is in turn supplied to this choice packet in order to extract a ULF. In
-  ; the future, we will need to add a level on top of this which branches to
-  ; different choice packets depending on whether the input is a question,
-  ; assertion, request, etc.
+  ; the future, we will need to add a higher level on top of this which branches
+  ; to different choice packets depending on whether the input is a yes-no question,
+  ; wh- question, assertion, request, etc.
   (READRULES '*yn-question-ulf-tree*
   '(
     1 (be det 2 block 0)
+       ; | We want to carefully construct hierarchies here to minimize the
+       ; | amount of backtracking we need to do. In this case, after matching
+       ; | something like "is there a red block ...", we want to check if the
+       ; | prompt is specifically something like "is there a red block on top
+       ; | of the green block", or if it's something else (to be constructed).
+       ; V
       2 (be det 2 block prep 3 det 3 ?)
           ; | Constituents headed with 'lex-ulf!' are processed into ULF
           ; | externally, depending on the lexical category ('v' i.e. verb
