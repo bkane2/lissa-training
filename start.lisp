@@ -9,10 +9,6 @@
 (setf *root-dir* *default-pathname-defaults*)
 
 
-(princ "level: ") (finish-output)
-(setq *level* (write-to-string (read)))
-
-
 ;
 ; load ttt
 ;
@@ -45,9 +41,10 @@
 ;
 (setf *temp-dir* ".")
 (setf *default-pathname-defaults* (truename *temp-dir*))
-(load (format nil "rules-input-level-~a.lisp" *level*))
-(load "rules-for-example-reaction.lisp")
-(load "rules-for-question-reaction.lisp")
+(load "rules-for-input-gist.lisp")
+(load "rules-for-input-ulf.lisp")
+(load "rules-for-reaction.lisp")
+(load "rules-for-question.lisp")
 (setf *default-pathname-defaults* *root-dir*)
 
 (lissa *mode*)
