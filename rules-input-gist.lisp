@@ -70,7 +70,7 @@
     ;    | |    | |            |
       2 (0 with 1 feat-someone 0)
         3 ((I drove here today with 3 4 \.) (example)) (0 :gist)
-        
+
       2 (0 myself 0)
         3 ((I drove myself here today \.) (example)) (0 :gist)
       2 ((I drove myself here today \.) (example)) (0 :gist)
@@ -100,7 +100,13 @@
       2 ((NIL Gist \: nothing found \.) (example)) (0 :gist)
 
   ))
-       
+  
+
+  ; The following can be ignored for the purposes of this tutorial.
+  ; In a nutshell though, thematic-answer-... is meant to detect long-form
+  ; responses, unbidden-answer-... is meant to detect gist clauses which
+  ; may be an answer to a prompt other than the current one, and
+  ; question-... is meant to detect questions by the user.
   (READRULES '*thematic-answer-from-example-input*
     '())
 
