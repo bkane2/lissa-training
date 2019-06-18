@@ -41,8 +41,8 @@
 ;
 (setf *temp-dir* ".")
 (setf *default-pathname-defaults* (truename *temp-dir*))
-(load "rules-for-input-gist.lisp")
-(load "rules-for-input-ulf.lisp")
+(load "rules-input-gist.lisp")
+(load "rules-input-ulf.lisp")
 (load "rules-for-reaction.lisp")
 (load "rules-for-question.lisp")
 (setf *default-pathname-defaults* *root-dir*)
